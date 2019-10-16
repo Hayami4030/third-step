@@ -19,6 +19,7 @@ int main(){
 		sum_E += english[i];
 	}
 
+	// average
 	ave[0] = sum_S / 20;
 	ave[1] = sum_E / 20;
 
@@ -26,6 +27,7 @@ int main(){
 		dev[0] += ((science[i]-ave[0]) * (science[i]-ave[0])) / 20;
 		dev[1] += ((english[i]-ave[1]) * (english[i]-ave[1])) / 20;
 	}
+	// standard deviation
 	dev[0] = sqrt(dev[0]);
 	dev[1] = sqrt(dev[1]);
 
@@ -35,7 +37,7 @@ int main(){
 	printf("\n");
 
 	printf("偏差値：\n");
-
+	// Deviation value
 	for(i = 0; i < 20; i++){
 		hensa = (science[i] - ave[0]) / dev[0] * 10 + 50;
 		printf("%d人目：%f, ", i+1, hensa);
@@ -47,6 +49,7 @@ int main(){
 	printf("\n");
 
 
+	// sort
 	for(i = 0; i < 20; i++){
 		for(j = 19; j > i; j--){
 	       		if(science[j] > science[i]){
