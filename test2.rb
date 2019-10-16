@@ -12,8 +12,8 @@ rika2=[]
 eigo2=[]
 
 20.times{|i|
-rika2[i]=50+(rika[i]-rikamean)/2
-eigo2[i]=50+(eigo[i]-eigomean)/2
+ rika2[i]=50+(rika[i]-rikamean)/2
+ eigo2[i]=50+(eigo[i]-eigomean)/2
 }
 
 p rika.sum
